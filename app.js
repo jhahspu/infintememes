@@ -7,7 +7,6 @@ const tc = [
   'Wellthatsucks',
   'shittymoviedetails',
   'awfuleverything',
-  'Instagramreality',
   'iamverybadass',
   'SweatyPalms',
   'ShittyLifeProTips',
