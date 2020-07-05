@@ -1,0 +1,27 @@
+*, *::before, *::after {margin: 0; padding: 0; box-sizing: border-box;}
+:root {
+  font-size: 16px;
+}
+#grid {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.grid-item img {
+  max-width: 100%;
+  box-shadow: 2px 3px 6px 0 rgba(0,0,0,0.4);
+  border-radius: 0.5rem;
+}
+.innactive {
+  display: none;
+}
+.loader {
+  position: fixed;
+  bottom: 2%;
+  left: 2%;
+  background-color: rebeccapurple;
+  color: whitesmoke;
+  padding: 1rem;
+}
+.loader.hidden { display: none; }
