@@ -36,3 +36,10 @@
 .box-shadow {
   box-shadow: 2px 3px 6px 0 rgba(0,0,0,0.4);
 }
+
+
+@media screen and (max-width: 640px) {
+  #grid {
+    grid-template-columns: 1fr;
+  }
+}
