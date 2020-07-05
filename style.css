@@ -30,6 +30,7 @@
   border-radius: 0.5rem;
   color: whitesmoke;
   padding: 1rem;
+  z-index: 999;
 }
 .loader.hidden { display: none; }
 .box-shadow {
