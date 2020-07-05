@@ -7,13 +7,11 @@ const tc = [
   'Wellthatsucks',
   'shittymoviedetails',
   'awfuleverything',
-  'DarK',
   'Instagramreality',
   'iamverybadass',
   'SweatyPalms',
   'ShittyLifeProTips',
   'HumansAreMetal',
-  'marvelstudios',
   'AdviceAnimals',
   'thatHappened'
 ];
