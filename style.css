@@ -8,10 +8,16 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-.grid-item img {
+.grid-item {
+  position: relative;
+}
+.grid-img {
   max-width: 100%;
-  box-shadow: 2px 3px 6px 0 rgba(0,0,0,0.4);
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+.grid-item:hover .svg-icon {
+  opacity: 1;
 }
 .innactive {
   display: none;
@@ -21,7 +27,11 @@
   bottom: 2%;
   left: 2%;
   background-color: rebeccapurple;
+  border-radius: 0.5rem;
   color: whitesmoke;
   padding: 1rem;
 }
 .loader.hidden { display: none; }
+.box-shadow {
+  box-shadow: 2px 3px 6px 0 rgba(0,0,0,0.4);
+}

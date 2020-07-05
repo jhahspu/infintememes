@@ -16,7 +16,6 @@ const tc = [
   'marvelstudios',
   'AdviceAnimals',
   'thatHappened'
-
 ];
 
 const getMemes = async () => {
@@ -27,12 +26,12 @@ const getMemes = async () => {
 }
 
 const popMemesGrid = (memes => {
-  console.log(memes);
   let html = '';
   memes['memes'].forEach(meme => {
     const gridItem = `
       <div class="grid-item">
-        <img class="grid-img" src="${meme.url}" alt="${meme.title}">
+        <img class="grid-img box-shadow" src="${meme.url}" alt="${meme.title}" onclick="fb_share(this)" title="click to share on fb">
+        </svg>
       </div>
     `;
     html += gridItem;
@@ -42,10 +41,7 @@ const popMemesGrid = (memes => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-
   getMemes().then(res => { popMemesGrid(res);  });
-  
-
 });
 
 window.onscroll = function(ev) {
@@ -53,6 +49,11 @@ window.onscroll = function(ev) {
     loader.classList.toggle('hidden');
     getMemes().then(res => { popMemesGrid(res); });
     // console.log(tc[rn]);
-    
   }
+}
+
+const fb_share = img => {
+  u = img.src;
+  t = img.getAttribute('alt');
+  window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;
 }
