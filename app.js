@@ -14,10 +14,11 @@ const tc = [
   'AdviceAnimals',
   'thatHappened'
 ];
+let memesList = [];
 
-const getMemes = async () => {
+const getMemes = async (nm = 9) => {
   let rn = Math.floor(Math.random()*tc.length);
-  const res = await fetch(`https://meme-api.herokuapp.com/gimme/${tc[rn]}/9`);
+  const res = await fetch(`https://meme-api.herokuapp.com/gimme/${tc[rn]}/${nm}`);
   // const res = await fetch(`https://meme-api.herokuapp.com/gimme/AdviceAnimals/5`);
   return res.json();
 }
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 window.onscroll = function(ev) {
   if ((window.innerHeight + window.pageYOffset - 45) >= document.body.offsetHeight) {
     loader.classList.toggle('hidden');
-    getMemes().then(res => { popMemesGrid(res); });
+    getMemes(5).then(res => { popMemesGrid(res); });
     // console.log(tc[rn]);
   }
 }
