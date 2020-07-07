@@ -7,9 +7,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-.grid-item { border: 1px solid red;
-  
-}
 .grid-img {
   width: 100%;
   border-radius: 0.5rem;

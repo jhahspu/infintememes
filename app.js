@@ -8,19 +8,36 @@ const tc = [
   'shittymoviedetails',
   'awfuleverything',
   'iamverybadass',
-  'SweatyPalms',
   'ShittyLifeProTips',
-  'HumansAreMetal',
-  'AdviceAnimals',
-  'thatHappened'
+  'AdviceAnimals'
 ];
 let memesList = [];
 
 const getMemes = async (nm = 9) => {
   let rn = Math.floor(Math.random()*tc.length);
-  const res = await fetch(`https://meme-api.herokuapp.com/gimme/${tc[rn]}/${nm}`);
+  const rs = await fetch(`https://meme-api.herokuapp.com/gimme/${tc[rn]}/9`);
+  return rs.json();
+  // do {
+  //   text += "The number is " + i;
+  //   i++;
+  // }
+  // while (i < 5);
+
+  // var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  // var n = fruits.includes("Mango");
+ 
+  // for (let i = 0; i < nm; i++) {
+    // do {
+        
+    // } while (res);
+    
+    
+  // }
+
+  
+  
   // const res = await fetch(`https://meme-api.herokuapp.com/gimme/AdviceAnimals/5`);
-  return res.json();
+  // console.log(results);
 }
 
 const popMemesGrid = (memes => {
@@ -39,13 +56,15 @@ const popMemesGrid = (memes => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  getMemes().then(res => { popMemesGrid(res);  });
+  getMemes().then(res => { 
+    popMemesGrid(res);
+  });
 });
 
 window.onscroll = function(ev) {
   if ((window.innerHeight + window.pageYOffset - 45) >= document.body.offsetHeight) {
     loader.classList.toggle('hidden');
-    getMemes(5).then(res => { popMemesGrid(res); });
+    getMemes(9).then(res => { popMemesGrid(res); });
     // console.log(tc[rn]);
   }
 }
