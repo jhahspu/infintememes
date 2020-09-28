@@ -4,11 +4,8 @@ const tc = [
   'OldSchoolCool',
   'dankmemes',
   'offlineTV',
-  'Wellthatsucks',
   'shittymoviedetails',
-  'awfuleverything',
   'iamverybadass',
-  'ShittyLifeProTips',
   'AdviceAnimals'
 ];
 let memesList = [];
@@ -17,27 +14,6 @@ const getMemes = async (nm = 9) => {
   let rn = Math.floor(Math.random()*tc.length);
   const rs = await fetch(`https://meme-api.herokuapp.com/gimme/${tc[rn]}/9`);
   return rs.json();
-  // do {
-  //   text += "The number is " + i;
-  //   i++;
-  // }
-  // while (i < 5);
-
-  // var fruits = ["Banana", "Orange", "Apple", "Mango"];
-  // var n = fruits.includes("Mango");
- 
-  // for (let i = 0; i < nm; i++) {
-    // do {
-        
-    // } while (res);
-    
-    
-  // }
-
-  
-  
-  // const res = await fetch(`https://meme-api.herokuapp.com/gimme/AdviceAnimals/5`);
-  // console.log(results);
 }
 
 const popMemesGrid = (memes => {
