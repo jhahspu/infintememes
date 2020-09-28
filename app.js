@@ -33,7 +33,7 @@ const popMemesGrid = (memes => {
 
 document.addEventListener('DOMContentLoaded', function() {
   getMemes().then(res => { 
-    console.log(res);
+    //console.log(res);
     popMemesGrid(res);
   });
 });
