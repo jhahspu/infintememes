@@ -5,7 +5,6 @@ const tc = [
   'dankmemes',
   'offlineTV',
   'shittymoviedetails',
-  'iamverybadass',
   'AdviceAnimals'
 ];
 let memesList = [];
