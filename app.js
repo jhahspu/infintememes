@@ -21,7 +21,7 @@ const popMemesGrid = (memes => {
     const gridItem = `
       <div class="grid-item">
         <img class="grid-img box-shadow" src="${meme.url}" alt="${meme.title}" onclick="fb_share(this)" title="click to share on fb">
-        <h2>${meme.title}</h2>
+        <p>${meme.title}</p>
         <div><span>${meme.subreddit}</span></div>
       </div>
     `;
