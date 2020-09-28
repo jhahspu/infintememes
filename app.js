@@ -21,7 +21,7 @@ const popMemesGrid = (memes => {
     const gridItem = `
       <div class="grid-item">
         <img class="grid-img box-shadow" src="${meme.url}" alt="${meme.title}" onclick="fb_share(this)" title="click to share on fb">
-        </svg>
+        
       </div>
     `;
     html += gridItem;
@@ -32,6 +32,7 @@ const popMemesGrid = (memes => {
 
 document.addEventListener('DOMContentLoaded', function() {
   getMemes().then(res => { 
+    console.log(res);
     popMemesGrid(res);
   });
 });
